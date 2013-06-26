@@ -6,7 +6,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'sprockets-bower'
+    gem 'sprockets-bower', :require => 'sprockets/bower'
 
 And then execute:
 
@@ -18,7 +18,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Bootstrap Bower into Sprockets with the following code:
+
+```ruby
+# In an initializer file...
+require 'sprockets/bower'
+sprockets = Sprockets::Environment.new
+bower = Sprocket::Bower::Manifest.load('/my/cool/.bowerrc')
+bower.configure(sprockets)
+```
 
 ## Contributing
 
