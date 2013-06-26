@@ -30,7 +30,7 @@ module Sprockets
       # Create a new Manifest and configure it with the bowerrc file.
       def self.load!(bowerrc_path)
         json = JSON.parse File.read bowerrc_path
-        new json['directory']
+        new File.expand_path json['directory'], File.dirname(bowerrc_path)
       end
     end
   end

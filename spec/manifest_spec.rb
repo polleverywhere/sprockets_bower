@@ -11,6 +11,7 @@ describe Sprockets::Bower::Manifest do
 
   it "should load from .bowerrc file" do
     Sprockets::Bower::Manifest.load(bowerrc_path).configure env
-    env.paths.should include('/my/bower/assets')
+    expanded_path = File.expand_path('../fixtures/my/bower/assets', __FILE__)
+    env.paths.should include(expanded_path)
   end
 end
