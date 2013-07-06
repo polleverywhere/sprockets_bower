@@ -1,6 +1,6 @@
 # Sprockets::Bower
 
-TODO: Write a gem description
+Stop using copy and paste or curl to manage JavaScript and CSS dependencies in your Ruby projects and start using Bower, a JavaScript package manager.
 
 ## Installation
 
