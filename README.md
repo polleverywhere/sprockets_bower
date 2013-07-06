@@ -25,7 +25,7 @@ Bootstrap Bower into Sprockets with the following code:
 ```ruby
 # config/initializers/sprockets_bower.rb
 require 'sprockets/bower'
-Sprockets::Bower::Manifest.load('.bowerrc').configure(Rails.application.assets)
+Sprockets::Bower::Manifest.load(File.join(Rails.root, '.bowerrc')).configure(Rails.application.assets)
 ```
 
 ### Stand-alone
