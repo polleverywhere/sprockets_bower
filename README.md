@@ -23,8 +23,8 @@ Bootstrap Bower into Sprockets with the following code:
 ```ruby
 # In an initializer file...
 require 'sprockets/bower'
+bower = Sprockets::Bower::Manifest.load('/my/cool/.bowerrc')
 sprockets = Sprockets::Environment.new
-bower = Sprocket::Bower::Manifest.load('/my/cool/.bowerrc')
 bower.configure(sprockets)
 ```
 
