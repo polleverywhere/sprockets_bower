@@ -20,6 +20,16 @@ Or install it yourself as:
 
 Bootstrap Bower into Sprockets with the following code:
 
+### Rails
+
+```ruby
+# config/initializers/sprockets_bower.rb
+require 'sprockets/bower'
+Sprockets::Bower::Manifest.load('.bowerrc').configure(Rails.application.assets)
+```
+
+### Stand-alone
+
 ```ruby
 # In an initializer file...
 require 'sprockets/bower'
@@ -28,9 +38,9 @@ sprockets = Sprockets::Environment.new
 bower.configure(sprockets)
 ```
 
-Don't forget to [install npm](http://nodejs.org/) and [bower](http://bower.io/).
-
 ## Usage
+
+[Install npm](http://nodejs.org/) and [bower](http://bower.io/).
 
 Use bower to install front-end dependencies with your project:
 
@@ -39,7 +49,6 @@ Use bower to install front-end dependencies with your project:
 And include the asset from your sprockets file:
 
     //= reqiure jquery/jquery
-
 
 ## Best Practices
 
