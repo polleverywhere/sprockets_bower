@@ -28,6 +28,33 @@ sprockets = Sprockets::Environment.new
 bower.configure(sprockets)
 ```
 
+Don't forget to [install npm](http://nodejs.org/) and [bower](http://bower.io/).
+
+## Usage
+
+Use bower to install front-end dependencies with your project:
+
+    bower install jquery
+
+And include the asset from your sprockets file:
+
+    //= reqiure jquery/jquery
+
+
+## Best Practices
+
+Its probably a good idea to keep your bower assets stashed away in the directory `vendor/assets/bower` via the `.bowerrc` file from your project root:
+
+```json
+{
+  "directory": "vendor/assets/bower",
+}
+```
+
+Then run:
+
+`bower install`
+
 ## Contributing
 
 1. Fork it
