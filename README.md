@@ -48,7 +48,7 @@ Use bower to install front-end dependencies with your project:
 
 And include the asset from your sprockets file:
 
-    //= reqiure jquery/jquery
+    //= require jquery/jquery
 
 ## Best Practices
 
